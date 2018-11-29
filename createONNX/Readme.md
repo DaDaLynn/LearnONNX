@@ -108,4 +108,4 @@ make_attribute(key,value,doc_string=None)
 **构建一个简单的onnx模型，实质上，只要构建好每一个node，然后将它们和输入输出超参数一起塞到graph，最后转成model就可以了。**
 
 写了一个base，在构建onnx的时候可以直接调用createOnnxNode、createOnnxModel来构建一个onnx模型，可以选择把onnx保存为txt格式，很大就是了。具体流程后续补上。
-[代码](https://github.com/htshinichi/LearnONNX/blob/master/createONNX/base.py)
+
