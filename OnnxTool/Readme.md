@@ -1,5 +1,5 @@
 ### getOnnxInfo.py  
-```
+```shell
 python getOnnxInfo.py
 >>请输入onnx模型路径:你的onnx模型所在路径,如/xxx/xxx/xxx.onnx
 >>0:退出,1:node数量,2:node类型,3:node名,4:model输入,5:model输出,6:model名,7:将整个onnx模型保存为txt
