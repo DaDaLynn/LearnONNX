@@ -6,11 +6,19 @@ python getOnnxInfo.py
 ```
 
 ### getAllNodes  
+用于将一个完整的ONNX模型拆分成单个node的onnx模型。
 ```
 python getAllNodes.py
 >>请输入onnx模型路径:你的onnx模型所在路径,如/xxx/xxx/xxx.onnx
 >>请输入节点onnx保存路径(默认路径:../OnnxModel/OnnxNodes/,default选择默认路径):这里还是自己设置比较好，默认路径写的有点问题
 >>请输入节点onnx保存形式(onnx或txt):onnx为模型文件，txt的话可读性好
+```
+这里建议自己查看一下onnx模型是否有value_info，如果没有，则拆分出来的单个节点的onnx模型是没有outpout的。  
+```
+#查看方法
+import onnx
+model = onnx.load(your onnx model path)
+print(model.graph.value_info)
 ```
 ### getSingleNode.py  
 ```
