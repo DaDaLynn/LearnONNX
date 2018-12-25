@@ -40,8 +40,9 @@ def getOutputTensorValueInfo(output_name,model):
     out_tvi = []
     for name in output_name:
         out_tvi = [inner_output for inner_output in model.graph.value_info if inner_output.name == name]
-        if name == model.graph.output[0].name:
-            out_tvi.append(model.graph.output[0])
+        for out in model.graph.output:
+            if name == out.name:
+                out_tvi.append(out)
     return out_tvi
 
 #获取对应超参数值
