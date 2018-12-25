@@ -6,7 +6,7 @@ python getOnnxInfo.py
 ```
 
 ### getAllNodes  
-用于将一个完整的ONNX模型拆分成单个node的onnx模型。
+用于将一个完整的ONNX模型拆分出所有单个node的onnx模型。
 ```shell
 python getAllNodes.py
 >>请输入onnx模型路径:你的onnx模型所在路径,如/xxx/xxx/xxx.onnx
@@ -22,6 +22,7 @@ model = onnx.load(your onnx model path)
 print(model.graph.value_info)
 ```
 ### getSingleNode.py  
+用于拆分出单个node的onnx模型
 ```shell
 python getSingleNode.py
 >>请输入onnx模型路径:你的onnx模型所在路径,如/xxx/xxx/xxx.onnx
