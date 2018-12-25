@@ -4,7 +4,7 @@ def main():
     model = loadOnnxModel(model_path)
     FLAG = True
     while FLAG:
-        operate = input("0:退出,1:node数量,2:node类型,3:node名,4:model输入,5:model输出,6:model名")
+        operate = input("0:退出,1:node数量,2:node类型,3:node名,4:model输入,5:model输出,6:model名,7:将整个onnx模型保存为txt")
         if operate == "0":
             FLAG = False
         elif operate == "1":
@@ -19,6 +19,10 @@ def main():
             print("model输出：",getModelOutputInfo(model))
         elif operate == "6":
             print("model名：",getModelName(model))
+        elif operate == "7":
+            save_path = input("请输入保存路径:")
+            saveOnnx2Txt(model,save_path)
+
         else:
             print("没有这个操作")
 
