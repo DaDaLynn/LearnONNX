@@ -26,6 +26,10 @@ def getModelOutputInfo(model):
 def getModelName(model):
     return model.graph.name
 
+def saveOnnx2Txt(model,save_path):
+    with open(save_path+model.graph.name+".txt","w") as f:
+        print(model,file=f)
+
 #加载模型
 def loadOnnxModel(path):
     model = onnx.load(path)
